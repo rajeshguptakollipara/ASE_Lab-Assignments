@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="" data-ng-app="ID">
+<head>
+  <meta t="utf-8">
+    <style>
+body {background-color:lightgray}
+h1   {color:blue}
+p    {color:crimson}
+        button {
+  border: solid 1px black;
+  color: #eee;
+  border-radius:5px;
+ -moz-border-radius:5px;
+  background: -moz-linear-gradient(top, #5E5E5E 0%, #474747 51%, #0a0e0a 51%, #0a0809 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5E5E5E), color-stop(51%,#474747), color-stop(51%,#0a0e0a), color-stop(100%,#0a0809));
+}
+button:hover {
+  color: white;
+}
+body  {
+
+    background-color: #cccccc;
+}
+</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    
+  <link rel="stylesheet" href="css/main.css"> 
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script src="js/admin.js"></script>
+
+</head>
+
+<body style="background-color:lightyellow">
+
+<center>
+<div class="wrapp" ng-controller="qrcode">
+    <h1> <div id="username">Welcome </div> </h1>
+<p> Enter the ID number to get QR Code</p> <br>
+
+
+<input type="text" id="idno"><br> <br> 
+    <button id="btn" ng-click="storeinQR()">Create QR Image</button><br><br>
+<div id="idnumber"></div> <br> <br>
+<img src="" id="qrimg">
+
+
+</div>
+
+</center>
+</body>
+<!--<script src="js/admin.js"></script> --> 
+</html>
+
+
+ 

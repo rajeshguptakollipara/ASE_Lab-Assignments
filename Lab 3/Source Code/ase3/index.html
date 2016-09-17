@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            padding-top: 60px;
+        }
+    </style>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href='css/style1.css' rel='stylesheet'>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1772808489664558";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  function fetchUserDetail()
+  {
+      FB.api('/me', function(response) {
+          alert("Name: "+ response.name + "\nFirst name: "+ response.first_name + "ID: "+response.id);
+      });
+  }
+
+  function checkFacebookLogin()
+  {
+      window.open('admin.html');
+  }
+
+  function initiateFBLogin()
+  {
+      FB.login(function(response) {
+          fetchUserDetail();
+      });
+  }
+
+
+  </script>
+
+    <ion-pane>
+
+<div class="bar bar-header bar-energized">
+  <h1 class="title">QR Code Generator</h1>
+</div>
+        
+      <ion-content>
+               <section class="container" >
+
+    <div class="login" align="center">
+        <br/><br/><br/>
+
+      <h1>Login</h1>
+        <p>User Name<input type="text" name="login"  id="username" value="" placeholder="User Name"></p>
+        <p>Password<input type="password" name="password" id="password" value="" placeholder="Password"></p>
+
+        <p class="submit"><input type="button" name="commit" value="Login" id="login"></p>
+        <p>Or Login with Facebook</p>
+        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false" onlogin="checkFacebookLogin()"></div>
+
+    </div>
+
+
+
+  </section>
+
+
+    <!-- /container -->
+    <!-- Placed at the end of the document so the pages load faster -->
+ 
+  
+      </ion-content>
+    </ion-pane>
+  </body>
+     <script src="js/index.js"></script>
+
+</html>
