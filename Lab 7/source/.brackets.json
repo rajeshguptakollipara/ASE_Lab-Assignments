@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "G:/Assistantship/ASE/Tutorials/Tutorial 7/Tutorial 7/ImageApp/www/js/firebase.js",
+        "E:/education/ase/material/lab7/ImageApp/platforms/android/platform_www/cordova-js-src/android/promptbasednativeapi.js"
+    ]
+}
