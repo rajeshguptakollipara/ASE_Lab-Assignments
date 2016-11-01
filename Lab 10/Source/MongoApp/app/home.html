@@ -1,0 +1,14 @@
+
+<div ng-controller="registerCntrl" align="center">
+    <h1>Welcome to the home page. </h1>
+    <h2>{{user.name}}</h2>
+    <input type="password" ng-model="user.password" placeholder="Old password"><br><br>
+    <input type="password" ng-model="user.password" placeholder="New password"><br><br>
+    <button  ng-click="updateAccount(user)">
+        Update Password
+    </button>
+    <p>Delete Account<p>
+    <button  ng-click="updateAccount(user)">
+        Delete Account
+    </button>
+</div>
